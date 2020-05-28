@@ -4,7 +4,7 @@ public class HouseApp {
 
 
     public static void main(String[] args) {
-        CleaningService cleaningService = new CleaningService();
+        CleaningService cleaningService = new CleaningService(new VacuumCleaner());
         cleaningService.clean();
     }
 
