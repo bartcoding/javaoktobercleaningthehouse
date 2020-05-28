@@ -1,29 +1,35 @@
 package be.intecbrussel.spring.springcoredemo;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 @Configuration
 public class HouseConfiguration {
 
-    static int id =0;
-
-    @Bean
-    @Primary
-    @Scope("prototype")
+    @Bean(initMethod = "startmethode")
     public Broom broom(){
-        id++;
-        return new Broom(id);
+        return new Broom();
+    }
+    @Bean
+    public VacuumCleaner vacuum(){
+        return new VacuumCleaner();
     }
 
+
+
     @Bean
-    public CleaningService cleaningService(Broom broom){
-        return new CleaningService(broom);
+    @Lazy
+    public CleaningService jill(Broom broom){
+        return new CleaningServiceImpl(broom);
     }
     @Bean
-    public CleaningService cleaningService2(Broom broom){
-        return new CleaningService(broom);
+    @Lazy
+    public CleaningService jane(VacuumCleaner vacuum){
+        return new CleaningServiceImpl(vacuum);
     }
+    @Bean
+    @Lazy
+    public CleaningService richard(Broom broom){
+        return new CleaningServiceImpl(broom);
+    }
+
 }
