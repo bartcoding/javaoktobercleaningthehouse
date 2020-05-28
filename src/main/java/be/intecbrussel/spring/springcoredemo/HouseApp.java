@@ -10,9 +10,8 @@ public class HouseApp {
     public static void main(String[] args) {
         try(ConfigurableApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(HouseConfiguration.class)){
-            CleaningTool cleaningTool = applicationContext.getBean("broom", CleaningTool.class);
+            CleaningTool cleaningTool = applicationContext.getBean(CleaningTool.class);
             cleaningTool.doCleanJob();
-
 
 
         }
