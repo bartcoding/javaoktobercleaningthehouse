@@ -1,4 +1,4 @@
-package be.intecbrussel.spring.springcoredemo;
+package be.intecbrussel.spring.springcoredemo.tools;
 
 public interface CleaningTool {
 

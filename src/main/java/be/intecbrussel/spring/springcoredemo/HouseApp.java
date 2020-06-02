@@ -1,6 +1,8 @@
 package be.intecbrussel.spring.springcoredemo;
 
-import org.springframework.context.ApplicationContext;
+import be.intecbrussel.spring.springcoredemo.services.CleaningService;
+import be.intecbrussel.spring.springcoredemo.services.GardeningService;
+import be.intecbrussel.spring.springcoredemo.tools.GardeningTool;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -10,7 +12,7 @@ public class HouseApp {
     public static void main(String[] args) {
         try(ConfigurableApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(HouseConfiguration.class)){
-        applicationContext.getBean("jill",CleaningService.class).clean();
+            applicationContext.getBean(GardeningService.class).garden();
 
 
         }

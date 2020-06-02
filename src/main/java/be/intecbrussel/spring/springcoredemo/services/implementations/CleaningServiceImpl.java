@@ -1,6 +1,12 @@
-package be.intecbrussel.spring.springcoredemo;
+package be.intecbrussel.spring.springcoredemo.services.implementations;
 
-public class CleaningServiceImpl implements CleaningService{
+
+import be.intecbrussel.spring.springcoredemo.services.CleaningService;
+import be.intecbrussel.spring.springcoredemo.tools.CleaningTool;
+
+
+public class CleaningServiceImpl implements CleaningService {
+
     private CleaningTool tool;
 
     public CleaningServiceImpl(CleaningTool tool){

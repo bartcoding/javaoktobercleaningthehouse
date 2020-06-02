@@ -1,6 +1,8 @@
-package be.intecbrussel.spring.springcoredemo;
+package be.intecbrussel.spring.springcoredemo.tools.implementations;
 
-public class Broom implements CleaningTool{
+import be.intecbrussel.spring.springcoredemo.tools.CleaningTool;
+
+public class Broom implements CleaningTool {
 
 
 

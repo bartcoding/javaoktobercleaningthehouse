@@ -1,6 +1,8 @@
-package be.intecbrussel.spring.springcoredemo;
+package be.intecbrussel.spring.springcoredemo.tools.implementations;
 
-public class VacuumCleaner implements CleaningTool{
+import be.intecbrussel.spring.springcoredemo.tools.CleaningTool;
+
+public class VacuumCleaner implements CleaningTool {
     public VacuumCleaner() {
         System.out.println("constructing a vacuumcleaner bean");
 
