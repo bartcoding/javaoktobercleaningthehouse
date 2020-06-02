@@ -8,12 +8,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class HouseApp {
 
-
     public static void main(String[] args) {
         try(ConfigurableApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(HouseConfiguration.class)){
             applicationContext.getBean(GardeningService.class).garden();
-
 
         }
         catch (Exception ex){
